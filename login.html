@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Login</title>
+
+
+  
+    <style>
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+
+
+body{
+background: rgba(126, 229, 225, 1);
+	
+}
+
+
+
+header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 40px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #F29E20 !important;
+}
+
+.login{
+	position: absolute;
+	top: calc(40% - 75px);
+	right: calc(20% - 50px);
+	height: 150px;
+	width: 320px;
+	padding: 10px;
+	
+}
+
+::-webkit-input-placeholder {                 /* Chrome/Opera/Safari */                 color: pink;             }             ::-moz-placeholder {                 /* Firefox 19+ */                 color: pink;             }             :-ms-input-placeholder {                 /* IE 10+ */                 color: pink;             }             :-moz-placeholder {                 /* Firefox 18- */                 color: pink;             }
+
+.login input[type=text]{
+	width: 450px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 450px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+<!--
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+--> 
+
+</style>
+
+  
+
+</head>
+
+
+<body oncontextmenu="return false"> <!-- CANT RIGHT CLICK PAGE/ PAGE SOURCE VIEW  .### = for class if not call #### --> 
+
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			
+		</div>
+		<br>
+		
+		
+		<div class="login">
+		<CENTER><U></U></CENTER>
+		<form name="login">
+			<div>
+			    <center><h1> Product Key:</h1>
+				<input type="text" placeholder="Enter in User product code" name="userid">
+				<!--<h1> Password:</h1>
+				 <input type="password" placeholder="" name="pswrd"><br> -->
+			
+				<input type="button" onclick="check(this.form)" value="Activate Now!"/>
+				</center>
+	
+			</div>
+		</form>
+		
+		</div>
+
+
+
+					<div style="width:230px; text-align:center;">
+											<img src="image/hgm.jpg">
+											</div>
+
+											
+											
+<script language="javascript">
+function check(form)
+{
+ 
+ if(form.userid.value == "student123") // USER AUTHENTIFICATION FOR ACCESS  OG*** if(form.userid.value == "student123" && form.pswrd.value == "")
+  {
+    window.open('kanban2.html') // for html just put file name, otherwise full address
+  }
+ else
+ {
+   alert("LOGIN FAILURE! \n Please check that all entries entered are correct!")
+  }
+}
+</script>
+</body>
+</html>

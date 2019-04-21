@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+
+<head>
+
+ 
+  
+  <title>HGM2 Kanban Tool </title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+  
+  			
+			
+  
+  
+      <style>
+
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+
+  <body>
+
+  <header>
+    <h1 class="title" align ="center">Student-Course-Manager</h1>
+	<br>	
+	<center>
+	By: <img src="image/hgm.png">
+	<br>
+	<br>
+	</center>
+	<div class="topright">
+	<SCRIPT LANGUAGE="Javascript">
+			<!-- 
+
+			// Array of day names
+			var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday",
+							"Thursday","Friday","Saturday");
+
+			// Array of month Names
+			var monthNames = new Array(
+			"January","February","March","April","May","June","July",
+			"August","September","October","November","December");
+
+			var now = new Date();
+			document.write(dayNames[now.getDay()] + ", " + 
+			monthNames[now.getMonth()] + " " + 
+			now.getDate() + ", " + now.getFullYear());
+
+			// -->
+			</SCRIPT>
+			
+			
+								<!DOCTYPE html>
+					<html>
+					<body>
+
+					<p></p>
+
+					<p id="demo"></p>
+
+					<script>
+					var myVar = setInterval(myTimer, 1000);
+
+					function myTimer() {
+					  var d = new Date();
+					  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+					}
+					</script>
+
+					</body>
+					</html>
+					
+		</div>
+			
+	</header>
+  	<a href ="login.html" style="float: right;"  title ="Logout"><span class="oi oi-power-standby" data-inline="false"></span></a>
+	<br>
+	<br>
+	<center>
+	
+				<script>
+			var myWindow;
+
+			function openWin() {
+			  myWindow = window.open("", "myWindow", "width=200,height=100");
+			  myWindow.document.write("<p>This is 'myWindow'</p>");
+			}
+
+			function closeWin() {
+			  myWindow.close();
+			}
+			</script>
+  		
+			
+			<!--
+						<p>Date/Time: <span id="datetime"></span> <script>
+			var dt = new Date();
+			document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+			</script></p>
+
+			
+  
+  
+			
+			
+  
+  
+  
+  
+			  <p id="demo"></p>
+
+
+			
+							<!DOCTYPE html>
+				<html>
+				<head>
+				<script>
+				function startTime() {
+				  var today = new Date();
+				  var h = today.getHours();
+				  var m = today.getMinutes();
+				  var s = today.getSeconds();
+				  m = checkTime(m);
+				  s = checkTime(s);
+				  document.getElementById('txt').innerHTML =
+				  h + ":" + m + ":" + s;
+				  var t = setTimeout(startTime, 500);
+				}
+				function checkTime(i) {
+				  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+				  return i;
+				}
+				</script>
+				</head>
+
+				<body onload="startTime()">
+
+				<div id="txt"></div>
+
+				</body>
+				</html>
+  
+
+			</center>   --> 
+  
+  <main>
+  <div>
+  
+    <link rel="stylesheet" type="text/css" href="kanban.css">
+  
+  
+  </div>
+  
+  
+    <aside class="column colors">
+  <div align ="center"><u>Pick your task:</div></u>
+      
+			<button id="orange" class="color" value="#FF6200" title="Homework"> 
+				<span class="oi oi-clipboard"></span> <!-- Check appears on click --> 
+            </button>
+			<P>Homework</P>
+			
+			<button id="blue" class="color" value="#2196F3" title="Test">
+                <span class="oi oi-graph"></span> 
+            </button>
+			<P>Test</P>
+			
+			<button id="neon-green" class="color" value="#00FF00" title ="Study">
+                <span class="oi oi-timer"></span>
+            </button>
+			<P>Study</P>
+			
+			<button id="off-red" class="color" value=" RGBA(255,0,0,0.63)"title ="Project">
+                <span class="oi oi-wrench"></span>
+            </button>
+			<P>Project</P>
+			
+      <button id="gold" class="color" value="#FFD400" title= "Presentation">
+                <span class="oi oi-play-circle"></span>
+            </button>
+			<P>Presentation</P>
+    </aside>
+
+    <div class="lists">
+
+      <section class="column list">
+        <header>
+          <h3>To-Do </h3>
+          <button>
+            <span class="oi oi-minus"></span> <!-- change symbol to minus on click down --> 
+            </button>
+        </header>
+		<br>
+			<!--- <center><p>Due Date of Task</p></center> --->
+					<br>
+				
+				<p style="margin-left: 40px"> Due date:<input type="date"  id ="due_date" placeholder="Date Task is Due"></p>
+				<input type="text" id = "course_name"placeholder="Name/Number of Course">
+				<input type="text"  id ="prof_name" placeholder="Professor">
+				<input type="text" id="user_task"placeholder="Description of task">
+				
+		
+		
+
+        <div id="sortable1" class="list-body">
+          <div class="kanban-card">
+		
+            <p>Placeholder text ( Lorem ipsum dolor, sit amet consectetur 
+			adipisicing elit. Harum, non amet ipsam dignissimos 
+			cum tempore ab qui veritatis corporis iure sit ad quia quod vel 
+			dolor ex nesciunt, quidem magnam! )</p>
+			
+            <button>
+                    <span class="oi oi-x"></span>	
+            </button>
+			
+          </div>
+		  
+        </div>
+      </section>
+      <section class="column list">
+        <header>
+          <h3>In-Progress</h3>
+        </header>
+        <div id="sortable2" class="list-body"></div>
+		
+		  <section class="column list">
+        <header>
+          <h3>On Hold</h3>
+        </header>
+        <div id="sortable3" class="list-body"></div>
+      </section>
+
+      </section>
+	  
+      <section class="column list">
+        <header>
+          <h3>Finished</h3>
+        </header>
+        <div id="sortable3" class="list-body"></div>
+      </section>
+
+    </div>
+
+  </main>
+  
+<!--
+
+	$('*');         /* This selector is a wild card method and will select all 
+                   elements in a document. */
+				   
+	  $('#course_name').val()
+
+$('#id');       /* This selector selects an element with the given ID. */
+
+$('.class');    /* The class selector will gather all elements in the 
+                   document with the given class name. */
+
+$('element');   /* This selector will collect all elements in a document with 
+                   the given tag name i.e. table, ul, li, a etc. */
+
+
+  <footer>
+    <span> By Harry E </span>  
+  </footer> -->
+
+</body>
+
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+     
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> <!--- Jquery, nothing would work on pg $function --->
+  
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script> <!-- DRAG and DROP for Card --> 
+
+  
+
+				<script id="rendered-js" >
+				  $(document).ready(function () {
+			  let color = "#2196F3";
+			  colorBorder();
+
+			  // Render bottom COLOR border for input field
+			  function colorBorder() {
+				$("input[type=text]").css("border-bottom", "2px solid" + color + "");
+			  }
+
+			  // Define card
+			  function card(color, text,) {
+				return (
+				  `<div class="kanban-card d-flex flex-column" style="background-color:` +
+				  color +
+				  `">
+						<p>` +
+				  text + 
+				  `</p> 
+				  	<p>` +
+				  $('#course_name').val() + 
+				  `</p> 
+				  <p>` +
+				  $('#prof_name').val() + 
+				  `</p> 
+				    <p>` +
+				  $('#due_date').val() + 
+				  `</p> 
+				
+				  
+				  
+						<button>
+							<span class="oi oi-x"></span>
+						</button>
+        </div>`);
+	
+		
+
+  }
+
+  // Add new card
+  $("input[type=text]").keypress(function (event) {
+	if (event.which === 13) {
+      let text = $(this).val();
+      $(this).val("");
+      $(this).
+      next(".list-body").
+      append(card(color, text,));
+    }
+	
+	
+  }) ;
+
+  // Delete card
+  $(document).on("click", ".kanban-card > button", function () {
+    $(this).
+    parent().
+    fadeOut(250, function () {
+      $(this).remove();
+    });
+  });
+  
+
+  // Toggle input field
+  $("header").on("click", "button", function () {
+    $(this).
+    children().
+    toggleClass("oi-plus oi-minus"); <!--- SYMBOL ANIMATIION FOR LINE 80 --> 
+    $("input[type=text]").slideToggle();
+  });
+
+  // Toggle chosen color
+  $(".color").on("click", function () {
+    color = $(this).val();
+    $(".oi-check").removeClass("oi-check");
+    colorBorder();
+    $(this).
+    children().
+    addClass("oi-check");
+  });
+
+  $(function () {
+    $("#sortable1, #sortable2, #sortable3").
+    sortable({
+      connectWith: ".list-body" }).
+
+    disableSelection();
+  });
+});
+      //# sourceURL=pen.js
+    
+	
+	</script>
+
+
+
+  
+  
+
+  <script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
+</body>
+
+</html>
+ 

@@ -1,0 +1,179 @@
+      
+body {
+  margin: 0px;
+  min-width: 1250px; 
+  font-family: "Noto", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body > header {
+  background:-webkit-gradient(linear, 80% 20%, 10% 21%, from(#FF3133), to(#004EFF));
+  color: white;
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 100;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+main {
+  margin-top: 0px;
+  display: flex;
+}
+
+aside {
+  flex: 1;
+}
+
+section {
+  width: 400px;
+}
+
+input[type="text"] { 
+  margin-top: 5px;
+  width: auto;
+  height:100px; /* space for text info */
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+button {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+
+#edit {
+position: absolute;	
+bottom: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+}
+.oi {
+	
+	font-size: 20px;
+	
+}
+.oi-plus, 
+.oi-minus {
+  font-size: 20px;
+  color: white;
+}
+
+.oi-x {
+  color: black;
+  font-size: 15px;
+}
+
+.colors {
+  align-items: center;
+}
+
+.color { 
+  box-sizing: border-box;
+  margin-top: 5px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.column {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-icon {
+  position:absolute;
+  top:5px;
+  right:5px
+}
+
+.lists {
+  display: flex;
+  justify-content: space-around;
+  flex: 15;
+}
+
+.list {
+  align-self: flex-start;
+}
+
+.list > header {
+  background-color: gray;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.list-body {
+  height: 100%;
+}
+
+.kanban-card {
+  background-color: #2196f3;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.kanban-card > button {
+  align-self: flex-start;
+}
+
+.kanban-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#orange {															
+  background: #FF6200;
+  /* white text */
+}
+#neon-green{
+background: #00FF00;
+/*white text*/
+}
+
+#blue {
+  background: #2196f3;
+  /* black text */
+}
+
+#off-red {
+  background: RGBA(255,0,0,0.63);
+  /* black text */
+}
+
+#gold {
+  background: #FFD400;
+  /* black text */
+}
