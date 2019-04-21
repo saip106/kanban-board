@@ -76,55 +76,54 @@
                         </button>
                     </header>
 
-                    <div>
-                        <label for="due_date">Due Date:</label>
-                        <input
-                            type="date"
-                            id="due_date"
-                            placeholder="Date Task is Due"
-                        />
-                    </div>
-                    <div>
-                        <label for="course_name">Course Name:</label>
-                        <input
-                            type="text"
-                            id="course_name"
-                            placeholder="Name/Number of Course"
-                        />
-                    </div>
-                    <div>
-                        <label for="prof_name">Professor Name:</label>
-                        <input
-                            type="text"
-                            id="prof_name"
-                            placeholder="Professor"
-                        />
-                    </div>
-
-                    <div>
-                        <label for="user_task">Task Descrption:</label>
-                        <input
-                            type="text"
-                            id="user_task"
-                            placeholder="Description of task"
-                        />
-                    </div>
-
-                    <div id="sortable1" class="list-body">
-                        <div class="kanban-card">
-                            <p>
-                                Placeholder text ( Lorem ipsum dolor, sit amet
-                                consectetur adipisicing elit. Harum, non amet
-                                ipsam dignissimos cum tempore ab qui veritatis
-                                corporis iure sit ad quia quod vel dolor ex
-                                nesciunt, quidem magnam! )
-                            </p>
-
-                            <button>
-                                <span class="oi oi-x"></span>
-                            </button>
+                    <form id="new_task_form">
+                        <div>
+                            <label for="due_date">Due Date:</label>
+                            <input
+                                type="date"
+                                id="due_date"
+                                placeholder="Date Task is Due"
+                            />
                         </div>
-                    </div>
+                        <div>
+                            <label for="course_name">Course Name:</label>
+                            <input
+                                type="text"
+                                id="course_name"
+                                placeholder="Name/Number of Course"
+                            />
+                        </div>
+                        <div>
+                            <label for="prof_name">Professor Name:</label>
+                            <input
+                                type="text"
+                                id="prof_name"
+                                placeholder="Professor"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="task_description"
+                                >Task Descrption:</label
+                            >
+                            <input
+                                type="text"
+                                id="task_description"
+                                placeholder="Description of task"
+                            />
+                        </div>
+
+                        <div>
+                            <input
+                                id="add_new_task"
+                                type="submit"
+                                value="Add Task"
+                                class="ui-button ui-widget ui-corner-all"
+                            />
+                        </div>
+                    </form>
+
+                    <div id="sortable1" class="list-body"></div>
                 </section>
                 <section class="column list">
                     <header>
@@ -153,12 +152,47 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
         <script>
+            function addNewTaskCard(
+                courseName,
+                professorName,
+                dueDate,
+                taskDescription
+            ) {
+                const newCard = `<div class="kanban-card d-flex flex-column" style="background-color: #2196F3">
+										<p>${taskDescription}</p> 
+										<p>${courseName}</p> 
+										<p>${professorName}</p> 
+										<p>${dueDate}</p> 
+										<button>
+											<span class="oi oi-x"></span>
+										</button>
+								</div>`;
+
+                $('#sortable1').append(newCard);
+            }
+
             $(function() {
                 $('#sortable1, #sortable2, #sortable3')
                     .sortable({
                         connectWith: '.list-body'
                     })
                     .disableSelection();
+
+                $('#add_new_task').click(function(event) {
+                    event.preventDefault();
+
+                    const courseName = $('#course_name').val();
+                    const professorName = $('#prof_name').val();
+                    const dueDate = $('#due_date').val();
+                    const taskDescription = $('#task_description').val();
+
+                    addNewTaskCard(
+                        courseName,
+                        professorName,
+                        dueDate,
+                        taskDescription
+                    );
+                });
             });
         </script>
     </body>
