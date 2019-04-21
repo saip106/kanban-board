@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Kanban Board</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="kanban.css" />
+    </head>
+    <body>
+        <main>
+            <aside class="column colors">
+                <div align="center">
+                    <u>Pick your task:</u>
+                </div>
+
+                <button
+                    id="orange"
+                    class="color"
+                    value="#FF6200"
+                    title="Homework"
+                >
+                    <span class="oi oi-clipboard"></span>
+                    <!-- Check appears on click -->
+                </button>
+                <P>Homework</P>
+
+                <button id="blue" class="color" value="#2196F3" title="Test">
+                    <span class="oi oi-graph"></span>
+                </button>
+                <P>Test</P>
+
+                <button
+                    id="neon-green"
+                    class="color"
+                    value="#00FF00"
+                    title="Study"
+                >
+                    <span class="oi oi-timer"></span>
+                </button>
+                <P>Study</P>
+
+                <button
+                    id="off-red"
+                    class="color"
+                    value=" RGBA(255,0,0,0.63)"
+                    title="Project"
+                >
+                    <span class="oi oi-wrench"></span>
+                </button>
+                <P>Project</P>
+
+                <button
+                    id="gold"
+                    class="color"
+                    value="#FFD400"
+                    title="Presentation"
+                >
+                    <span class="oi oi-play-circle"></span>
+                </button>
+                <P>Presentation</P>
+            </aside>
+
+            <div class="lists">
+                <section class="column list">
+                    <header>
+                        <h3>To-Do</h3>
+                        <button>
+                            <span class="oi oi-minus"></span>
+                            <!-- change symbol to minus on click down -->
+                        </button>
+                    </header>
+
+                    <div>
+                        <label for="due_date">Due Date:</label>
+                        <input
+                            type="date"
+                            id="due_date"
+                            placeholder="Date Task is Due"
+                        />
+                    </div>
+                    <div>
+                        <label for="course_name">Course Name:</label>
+                        <input
+                            type="text"
+                            id="course_name"
+                            placeholder="Name/Number of Course"
+                        />
+                    </div>
+                    <div>
+                        <label for="prof_name">Professor Name:</label>
+                        <input
+                            type="text"
+                            id="prof_name"
+                            placeholder="Professor"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="user_task">Task Descrption:</label>
+                        <input
+                            type="text"
+                            id="user_task"
+                            placeholder="Description of task"
+                        />
+                    </div>
+
+                    <div id="sortable1" class="list-body">
+                        <div class="kanban-card">
+                            <p>
+                                Placeholder text ( Lorem ipsum dolor, sit amet
+                                consectetur adipisicing elit. Harum, non amet
+                                ipsam dignissimos cum tempore ab qui veritatis
+                                corporis iure sit ad quia quod vel dolor ex
+                                nesciunt, quidem magnam! )
+                            </p>
+
+                            <button>
+                                <span class="oi oi-x"></span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="column list">
+                    <header>
+                        <h3>In-Progress</h3>
+                    </header>
+                    <div id="sortable2" class="list-body"></div>
+
+                    <section class="column list">
+                        <header>
+                            <h3>On Hold</h3>
+                        </header>
+                        <div id="sortable3" class="list-body"></div>
+                    </section>
+                </section>
+
+                <section class="column list">
+                    <header>
+                        <h3>Finished</h3>
+                    </header>
+                    <div id="sortable3" class="list-body"></div>
+                </section>
+            </div>
+        </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+        <script>
+            $(function() {
+                $('#sortable1, #sortable2, #sortable3')
+                    .sortable({
+                        connectWith: '.list-body'
+                    })
+                    .disableSelection();
+            });
+        </script>
+    </body>
+</html>
